@@ -55,14 +55,19 @@ class SeriesViewController: UIViewController {
     }
     
     @objc private func actorsPressed(){
-        let actorsVC = ActorsViewController()
+        let mySerie = series[indexCurrentSerie]
+        let actorsVC = ActorsViewController(actors: mySerie.actors)
         navigationController?.pushViewController(actorsVC, animated: true)
     }
     
     private func loadAllSeries(){
-        let breakingBad = Serie(name: "Breking bad", imageFile: "breaking", summary: "AAAAAAAAAAAAAAAAAAA", seasons: 6)
-        let betterCallSaul = Serie(name: "Better Call Saul", imageFile: "saul", summary: "AAAAAAAAAAAAAAAAAA", seasons: 3)
-        let gameOfThrones = Serie(name: "Game of Thrones", imageFile: "thrones", summary: "AAAAAAAAAAAAAAAAAAAAAAA", seasons: 8)
+        let breakingBad = Serie(name: "Breking bad", imageFile: "breaking", summary: "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", seasons: 6, actors: [])
+        let betterCallSaul = Serie(name: "Better Call Saul", imageFile: "saul", summary: "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", seasons: 3, actors: [])
+        
+        let daenerys = Actor(name: "Emilia Clarke", avatar: "emilia")
+        let peter = Actor(name: "Peter Dinklage", avatar: "peter")
+        
+        let gameOfThrones = Serie(name: "Game of Thrones", imageFile: "thrones", summary: "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", seasons: 8, actors: [daenerys, peter])
         series.append(gameOfThrones)
         series.append(breakingBad)
         series.append(betterCallSaul)

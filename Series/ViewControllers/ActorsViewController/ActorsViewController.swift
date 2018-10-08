@@ -11,6 +11,12 @@ import UIKit
 class ActorsViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
+    internal var actors: [Actor] = []
+    
+    convenience init(actors: [Actor]) {
+        self.init()
+        self.actors = actors
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,14 +54,16 @@ extension ActorsViewController: UITableViewDelegate, UITableViewDataSource {
         return 1
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 20
+        return actors.count
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 55.0
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: ActorCell = (tableView.dequeueReusableCell(withIdentifier: "ActorCell", for: indexPath) as? ActorCell)!
-        cell.nameLabel.text = "Ejemplo de nombre \(indexPath.row)"
+        let actor = actors[indexPath.row]
+        cell.nameLabel.text = actor.name
+        cell.avatarImageView.image = UIImage(named: actor.avatarImage)
         return cell
     }
 }

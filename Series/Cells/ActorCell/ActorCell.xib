@@ -15,7 +15,7 @@
         <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="ActorCell" customModule="Series" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
@@ -34,9 +34,13 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="Ez8-Xx-d0o" firstAttribute="leading" secondItem="A33-WQ-o7N" secondAttribute="trailing" constant="8" id="2im-Sv-Vgt"/>
+                    <constraint firstAttribute="bottom" secondItem="A33-WQ-o7N" secondAttribute="bottom" id="BqF-To-xSQ"/>
                     <constraint firstItem="A33-WQ-o7N" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="HFr-7b-dzc"/>
                     <constraint firstItem="A33-WQ-o7N" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="OWI-6N-2Ra"/>
+                    <constraint firstItem="A33-WQ-o7N" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Qgg-Lk-nE8"/>
                     <constraint firstAttribute="bottom" secondItem="A33-WQ-o7N" secondAttribute="bottom" id="Sob-BI-TI6"/>
+                    <constraint firstAttribute="bottom" secondItem="Ez8-Xx-d0o" secondAttribute="bottom" id="avq-br-jOj"/>
+                    <constraint firstItem="Ez8-Xx-d0o" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="hEu-EQ-BhO"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

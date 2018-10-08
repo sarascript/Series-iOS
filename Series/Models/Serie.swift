@@ -14,13 +14,13 @@ class Serie{
     var imageFile: String!
     var summary: String!
     var seasons: Int!
-    var actores: [Actor]!
+    var actors: [Actor]!
     
-    init(name: String, imageFile: String, summary:String, seasons:Int, actores:[Actor]){
+    init(name: String, imageFile: String, summary:String, seasons:Int, actors:[Actor]){
         self.name = name
         self.imageFile = imageFile
         self.summary = summary
         self.seasons = seasons
-        self.actores = actores
+        self.actors = actors
     }
 }
