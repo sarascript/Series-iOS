@@ -12,6 +12,8 @@
 		30E67C71216B4D8100837EA1 /* ActorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E67C6F216B4D8100837EA1 /* ActorCell.swift */; };
 		30E67C72216B4D8100837EA1 /* ActorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30E67C70216B4D8100837EA1 /* ActorCell.xib */; };
 		30E67C76216B5AF900837EA1 /* Actor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E67C75216B5AF900837EA1 /* Actor.swift */; };
+		30E67C7A216B676400837EA1 /* EmptyStatusCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E67C78216B676400837EA1 /* EmptyStatusCell.swift */; };
+		30E67C7B216B676400837EA1 /* EmptyStatusCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30E67C79216B676400837EA1 /* EmptyStatusCell.xib */; };
 		BD1BA8612162087C00A10698 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1BA8602162087C00A10698 /* AppDelegate.swift */; };
 		BD1BA8682162087D00A10698 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD1BA8672162087D00A10698 /* Assets.xcassets */; };
 		BD1BA86B2162087D00A10698 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD1BA8692162087D00A10698 /* LaunchScreen.storyboard */; };
@@ -28,6 +30,8 @@
 		30E67C6F216B4D8100837EA1 /* ActorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActorCell.swift; sourceTree = "<group>"; };
 		30E67C70216B4D8100837EA1 /* ActorCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActorCell.xib; sourceTree = "<group>"; };
 		30E67C75216B5AF900837EA1 /* Actor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Actor.swift; sourceTree = "<group>"; };
+		30E67C78216B676400837EA1 /* EmptyStatusCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStatusCell.swift; sourceTree = "<group>"; };
+		30E67C79216B676400837EA1 /* EmptyStatusCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyStatusCell.xib; sourceTree = "<group>"; };
 		BD1BA85D2162087C00A10698 /* Series.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Series.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD1BA8602162087C00A10698 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD1BA8672162087D00A10698 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -54,6 +58,7 @@
 		30E67C68216B4CE000837EA1 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				30E67C77216B674000837EA1 /* EmptyStatusCell */,
 				30E67C69216B4CEF00837EA1 /* ActorCell */,
 			);
 			path = Cells;
@@ -75,6 +80,15 @@
 				30E67C6C216B4D6600837EA1 /* ActorsViewController.xib */,
 			);
 			path = ActorsViewController;
+			sourceTree = "<group>";
+		};
+		30E67C77216B674000837EA1 /* EmptyStatusCell */ = {
+			isa = PBXGroup;
+			children = (
+				30E67C78216B676400837EA1 /* EmptyStatusCell.swift */,
+				30E67C79216B676400837EA1 /* EmptyStatusCell.xib */,
+			);
+			path = EmptyStatusCell;
 			sourceTree = "<group>";
 		};
 		BD1BA8542162087C00A10698 = {
@@ -203,6 +217,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD1BA86B2162087D00A10698 /* LaunchScreen.storyboard in Resources */,
+				30E67C7B216B676400837EA1 /* EmptyStatusCell.xib in Resources */,
 				30E67C72216B4D8100837EA1 /* ActorCell.xib in Resources */,
 				BD1BA8682162087D00A10698 /* Assets.xcassets in Resources */,
 				30E67C6E216B4D6600837EA1 /* ActorsViewController.xib in Resources */,
@@ -221,6 +236,7 @@
 				30E67C6D216B4D6600837EA1 /* ActorsViewController.swift in Sources */,
 				BD1BA87C21621C2800A10698 /* SeriesViewController.swift in Sources */,
 				BD1BA87721620A6700A10698 /* LoginViewController.swift in Sources */,
+				30E67C7A216B676400837EA1 /* EmptyStatusCell.swift in Sources */,
 				30E67C76216B5AF900837EA1 /* Actor.swift in Sources */,
 				BD1BA880216225BF00A10698 /* Serie.swift in Sources */,
 				BD1BA8612162087C00A10698 /* AppDelegate.swift in Sources */,

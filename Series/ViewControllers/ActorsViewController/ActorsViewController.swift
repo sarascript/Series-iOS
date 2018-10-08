@@ -29,6 +29,9 @@ class ActorsViewController: UIViewController {
         let identifier = "ActorCell"
         let cellNib = UINib(nibName: identifier, bundle: nil)
         tableView.register(cellNib, forCellReuseIdentifier: identifier)
+        let identifierEmpty = "EmptyStatusCell"
+        let cellNibEmpty = UINib(nibName: identifierEmpty, bundle: nil)
+        tableView.register(cellNibEmpty, forCellReuseIdentifier: identifierEmpty)
     }
 
     override func didReceiveMemoryWarning() {
@@ -54,16 +57,40 @@ extension ActorsViewController: UITableViewDelegate, UITableViewDataSource {
         return 1
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return actors.count
+        if actors.count == 0 {
+            return 1
+        } else {
+            return actors.count
+        }
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if actors.count != 0 {
         return 55.0
+        } else {
+            return 90.0
+        }
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell: ActorCell = (tableView.dequeueReusableCell(withIdentifier: "ActorCell", for: indexPath) as? ActorCell)!
+        var cell = UITableViewCell()
+        if actors.count != 0 {
+            cell = createActorCellForIndexPath(indexPath: indexPath) as ActorCell
+        } else {
+            cell = createEmptyCellForIndexPath(indexPath: indexPath) as EmptyStatusCell
+        }
+        return cell
+    }
+    
+    func createActorCellForIndexPath(indexPath: IndexPath) -> ActorCell {
+        let cell: ActorCell = tableView.dequeueReusableCell(withIdentifier: "ActorCell", for: indexPath) as! ActorCell
         let actor = actors[indexPath.row]
         cell.nameLabel.text = actor.name
         cell.avatarImageView.image = UIImage(named: actor.avatarImage)
         return cell
     }
+    
+    func createEmptyCellForIndexPath(indexPath: IndexPath) -> EmptyStatusCell {
+        let cell: EmptyStatusCell = tableView.dequeueReusableCell(withIdentifier: "EmptyStatusCell", for: indexPath) as! EmptyStatusCell
+        return cell
+    }
+    
 }

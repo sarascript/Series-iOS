@@ -21,7 +21,6 @@ class SeriesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title="Series"
-        setupBUttonsItems()
         loadAllSeries()
         refresUIWithSerie(series[indexCurrentSerie])
 
@@ -37,19 +36,23 @@ class SeriesViewController: UIViewController {
     }
     
     private func refresUIWithSerie(_ serie: Serie){
+        setupButtonsItems()
         titulos.text = serie.name
         image.image = UIImage(named: serie.imageFile)
         bg.image = UIImage(named: serie.imageFile)
         desc.text = serie.summary
     }
     
-    private func setupBUttonsItems(){
+    private func setupButtonsItems(){
         let cancelBarButton = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(cancelPressed))
         navigationItem.setLeftBarButton(cancelBarButton, animated: false)
-        let actorsBarButton = UIBarButtonItem(title: "Actors", style: .plain, target: self, action: #selector(actorsPressed))
-        navigationItem.setRightBarButton(actorsBarButton, animated: false)
-        
+        let mySerie = series[indexCurrentSerie]
+        if mySerie.actors.count != 0 {
+            let actorsBarButton = UIBarButtonItem(title: "Actors", style: .plain, target: self, action: #selector(actorsPressed))
+            navigationItem.setRightBarButton(actorsBarButton, animated: false)
+        }
     }
+    
     @objc private func cancelPressed(){
    dismiss(animated: true, completion: nil)
     }
@@ -58,6 +61,7 @@ class SeriesViewController: UIViewController {
         let mySerie = series[indexCurrentSerie]
         let actorsVC = ActorsViewController(actors: mySerie.actors)
         navigationController?.pushViewController(actorsVC, animated: true)
+
     }
     
     private func loadAllSeries(){
