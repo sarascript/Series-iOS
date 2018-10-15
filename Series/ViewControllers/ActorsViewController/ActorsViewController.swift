@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class ActorsViewController: UIViewController {
     
@@ -22,6 +23,7 @@ class ActorsViewController: UIViewController {
         super.viewDidLoad()
         title = "Actors"
         registerCells()
+        setupBarButtonItems()
         // Do any additional setup after loading the view.
     }
     
@@ -32,6 +34,25 @@ class ActorsViewController: UIViewController {
         let identifierEmpty = "EmptyStatusCell"
         let cellNibEmpty = UINib(nibName: identifierEmpty, bundle: nil)
         tableView.register(cellNibEmpty, forCellReuseIdentifier: identifierEmpty)
+    }
+    
+    private func setupBarButtonItems() {
+        let addBarButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addPressed))
+        navigationItem.setRightBarButton(addBarButton, animated: false)
+    }
+    
+    @objc private func addPressed() {
+        let actor = Actor(name: "New Actor", avatar: "https://robohash.org/406b5a0f87dd6fe4e944ed0fbc9961f2?set=set4&bgset=&size=400x400")
+        actors.append(actor)
+        
+        tableView.beginUpdates()
+        //Case we are showing EmptyStatusCell we have to reload this row
+        if actors.count == 1 {
+            tableView.reloadRows(at: [IndexPath(row: 0, section: 0)], with: .bottom)
+        } else {
+            tableView.insertRows(at: [IndexPath(row: actors.count - 1, section: 0)], with: .automatic)
+        }
+        tableView.endUpdates()
     }
 
     override func didReceiveMemoryWarning() {
@@ -53,6 +74,14 @@ class ActorsViewController: UIViewController {
 }
 
 extension ActorsViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        if actors.count > 0 {
+            return "main"
+        }
+        return nil
+    }
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -80,17 +109,46 @@ extension ActorsViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return (actors.count > 0)
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            deleteActorAtIndexPath(indexPath)
+        }
+    }
+    
     func createActorCellForIndexPath(indexPath: IndexPath) -> ActorCell {
         let cell: ActorCell = tableView.dequeueReusableCell(withIdentifier: "ActorCell", for: indexPath) as! ActorCell
         let actor = actors[indexPath.row]
         cell.nameLabel.text = actor.name
-        cell.avatarImageView.image = UIImage(named: actor.avatarImage)
+        cell.avatarImageView.sd_setImage(with: URL(string: actor.avatarImage), placeholderImage: UIImage(named: "placeholder"), options: .cacheMemoryOnly, completed: nil)
         return cell
     }
     
     func createEmptyCellForIndexPath(indexPath: IndexPath) -> EmptyStatusCell {
         let cell: EmptyStatusCell = tableView.dequeueReusableCell(withIdentifier: "EmptyStatusCell", for: indexPath) as! EmptyStatusCell
+        cell.delegate = self
         return cell
     }
     
+    internal func deleteActorAtIndexPath(_ indexPath: IndexPath) {
+        actors.remove(at: indexPath.row)
+        tableView.beginUpdates()
+        if actors.count == 0 {
+            tableView.reloadRows(at: [IndexPath(row: 0, section: 0)], with: .top)
+        } else {
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        }
+        tableView.endUpdates()
+    }
+    
 }
+
+extension ActorsViewController: EmptyStatusCellDelegate {
+    func emptyStatusCellDidPressBack(cell: EmptyStatusCell) {
+        navigationController?.popViewController(animated: true)
+    }
+}
+

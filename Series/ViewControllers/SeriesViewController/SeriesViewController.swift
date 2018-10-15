@@ -68,10 +68,12 @@ class SeriesViewController: UIViewController {
         let breakingBad = Serie(name: "Breking bad", imageFile: "breaking", summary: "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", seasons: 6, actors: [])
         let betterCallSaul = Serie(name: "Better Call Saul", imageFile: "saul", summary: "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", seasons: 3, actors: [])
         
-        let daenerys = Actor(name: "Emilia Clarke", avatar: "emilia")
-        let peter = Actor(name: "Peter Dinklage", avatar: "peter")
+        //https://vinicius73.github.io/gravatar-url-generator/#/robohash
+        let daenerys = Actor(name: "Emilia Clarke", avatar: "https://robohash.org/801837a53bb592878f9767990fa14f77?set=set4&bgset=bg1&size=400x400")
+        let peter = Actor(name: "Peter Dinklage", avatar: "https://robohash.org/c65ede2a59101e2a728f17427db5241c?set=set4&bgset=bg1&size=400x400")
+        let actor = Actor(name: "Actor", avatar: "")
         
-        let gameOfThrones = Serie(name: "Game of Thrones", imageFile: "thrones", summary: "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", seasons: 8, actors: [daenerys, peter])
+        let gameOfThrones = Serie(name: "Game of Thrones", imageFile: "thrones", summary: "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", seasons: 8, actors: [daenerys, peter, actor])
         series.append(gameOfThrones)
         series.append(breakingBad)
         series.append(betterCallSaul)

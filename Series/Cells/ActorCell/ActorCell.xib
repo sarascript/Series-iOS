@@ -15,32 +15,31 @@
         <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="ActorCell" customModule="Series" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="A33-WQ-o7N" userLabel="Avatar Image View">
-                        <rect key="frame" x="0.0" y="0.0" width="45" height="44"/>
-                    </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ez8-Xx-d0o" userLabel="Name Label">
-                        <rect key="frame" x="53" y="11" width="267" height="21"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="A33-WQ-o7N" userLabel="Avatar Image View">
+                        <rect key="frame" x="5" y="5" width="45" height="45"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="21" id="B7t-Nn-Gdk"/>
+                            <constraint firstAttribute="width" constant="45" id="0eu-EL-pyY"/>
+                            <constraint firstAttribute="height" constant="45" id="XHu-Dk-fgM"/>
                         </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ez8-Xx-d0o" userLabel="Name Label">
+                        <rect key="frame" x="60" y="11" width="42" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="Ez8-Xx-d0o" firstAttribute="leading" secondItem="A33-WQ-o7N" secondAttribute="trailing" constant="8" id="2im-Sv-Vgt"/>
-                    <constraint firstAttribute="bottom" secondItem="A33-WQ-o7N" secondAttribute="bottom" id="BqF-To-xSQ"/>
-                    <constraint firstItem="A33-WQ-o7N" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="HFr-7b-dzc"/>
-                    <constraint firstItem="A33-WQ-o7N" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="OWI-6N-2Ra"/>
-                    <constraint firstItem="A33-WQ-o7N" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Qgg-Lk-nE8"/>
-                    <constraint firstAttribute="bottom" secondItem="A33-WQ-o7N" secondAttribute="bottom" id="Sob-BI-TI6"/>
-                    <constraint firstAttribute="bottom" secondItem="Ez8-Xx-d0o" secondAttribute="bottom" id="avq-br-jOj"/>
-                    <constraint firstItem="Ez8-Xx-d0o" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="hEu-EQ-BhO"/>
+                    <constraint firstItem="Ez8-Xx-d0o" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="11" id="5rF-ha-Inz"/>
+                    <constraint firstItem="A33-WQ-o7N" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="8Ly-Q4-MNg"/>
+                    <constraint firstItem="A33-WQ-o7N" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="MjB-ee-ZAb"/>
+                    <constraint firstItem="Ez8-Xx-d0o" firstAttribute="leading" secondItem="A33-WQ-o7N" secondAttribute="trailing" constant="10" id="Ssc-eV-h36"/>
+                    <constraint firstAttribute="bottom" secondItem="Ez8-Xx-d0o" secondAttribute="bottom" constant="11" id="kaY-0d-QkO"/>
+                    <constraint firstAttribute="bottom" secondItem="A33-WQ-o7N" secondAttribute="bottom" constant="5" id="wzS-ai-XEB"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
