@@ -7,10 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		302A5F112174A0340078F0CB /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302A5F0F2174A0340078F0CB /* AboutViewController.swift */; };
-		302A5F122174A0340078F0CB /* AboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 302A5F102174A0340078F0CB /* AboutViewController.xib */; };
-		302A5F172174A0D10078F0CB /* About2LabelsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302A5F152174A0D10078F0CB /* About2LabelsCell.swift */; };
-		302A5F182174A0D10078F0CB /* About2LabelsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 302A5F162174A0D10078F0CB /* About2LabelsCell.xib */; };
+		300A95E12187091500D509AB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 300A95E32187091500D509AB /* Localizable.strings */; };
+		300A95E82187174E00D509AB /* ChatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300A95E62187174E00D509AB /* ChatsViewController.swift */; };
+		300A95E92187174E00D509AB /* ChatsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 300A95E72187174E00D509AB /* ChatsViewController.xib */; };
+		300A95ED2187176D00D509AB /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300A95EB2187176D00D509AB /* ContactsViewController.swift */; };
+		300A95EE2187176D00D509AB /* ContactsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 300A95EC2187176D00D509AB /* ContactsViewController.xib */; };
+		300A95F22187178E00D509AB /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300A95F02187178E00D509AB /* SettingsViewController.swift */; };
+		300A95F32187178E00D509AB /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 300A95F12187178E00D509AB /* SettingsViewController.xib */; };
+		300A95F7218717A800D509AB /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300A95F5218717A800D509AB /* FavoritesViewController.swift */; };
+		300A95F8218717A800D509AB /* FavoritesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 300A95F6218717A800D509AB /* FavoritesViewController.xib */; };
+		300A95FB218723B500D509AB /* SpicyRice-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 300A95FA218723B500D509AB /* SpicyRice-Regular.ttf */; };
 		30E67C6D216B4D6600837EA1 /* ActorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E67C6B216B4D6600837EA1 /* ActorsViewController.swift */; };
 		30E67C6E216B4D6600837EA1 /* ActorsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30E67C6C216B4D6600837EA1 /* ActorsViewController.xib */; };
 		30E67C71216B4D8100837EA1 /* ActorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E67C6F216B4D8100837EA1 /* ActorCell.swift */; };
@@ -31,10 +37,17 @@
 
 /* Begin PBXFileReference section */
 		16A97E7F83707A92BDBB33BE /* Pods-Series.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Series.release.xcconfig"; path = "Pods/Target Support Files/Pods-Series/Pods-Series.release.xcconfig"; sourceTree = "<group>"; };
-		302A5F0F2174A0340078F0CB /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
-		302A5F102174A0340078F0CB /* AboutViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AboutViewController.xib; sourceTree = "<group>"; };
-		302A5F152174A0D10078F0CB /* About2LabelsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = About2LabelsCell.swift; sourceTree = "<group>"; };
-		302A5F162174A0D10078F0CB /* About2LabelsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = About2LabelsCell.xib; sourceTree = "<group>"; };
+		300A95E22187091500D509AB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		300A95E42187093200D509AB /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		300A95E62187174E00D509AB /* ChatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsViewController.swift; sourceTree = "<group>"; };
+		300A95E72187174E00D509AB /* ChatsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatsViewController.xib; sourceTree = "<group>"; };
+		300A95EB2187176D00D509AB /* ContactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
+		300A95EC2187176D00D509AB /* ContactsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactsViewController.xib; sourceTree = "<group>"; };
+		300A95F02187178E00D509AB /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		300A95F12187178E00D509AB /* SettingsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
+		300A95F5218717A800D509AB /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
+		300A95F6218717A800D509AB /* FavoritesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoritesViewController.xib; sourceTree = "<group>"; };
+		300A95FA218723B500D509AB /* SpicyRice-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SpicyRice-Regular.ttf"; sourceTree = "<group>"; };
 		30E67C6B216B4D6600837EA1 /* ActorsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActorsViewController.swift; sourceTree = "<group>"; };
 		30E67C6C216B4D6600837EA1 /* ActorsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActorsViewController.xib; sourceTree = "<group>"; };
 		30E67C6F216B4D8100837EA1 /* ActorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActorCell.swift; sourceTree = "<group>"; };
@@ -68,28 +81,53 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		302A5F0E21749FF30078F0CB /* AboutViewController */ = {
+		300A95E52187171C00D509AB /* ChatsViewController */ = {
 			isa = PBXGroup;
 			children = (
-				302A5F0F2174A0340078F0CB /* AboutViewController.swift */,
-				302A5F102174A0340078F0CB /* AboutViewController.xib */,
+				300A95E62187174E00D509AB /* ChatsViewController.swift */,
+				300A95E72187174E00D509AB /* ChatsViewController.xib */,
 			);
-			path = AboutViewController;
+			path = ChatsViewController;
 			sourceTree = "<group>";
 		};
-		302A5F192174A1E00078F0CB /* AboutCell */ = {
+		300A95EA2187175400D509AB /* ContactsViewController */ = {
 			isa = PBXGroup;
 			children = (
-				302A5F152174A0D10078F0CB /* About2LabelsCell.swift */,
-				302A5F162174A0D10078F0CB /* About2LabelsCell.xib */,
+				300A95EB2187176D00D509AB /* ContactsViewController.swift */,
+				300A95EC2187176D00D509AB /* ContactsViewController.xib */,
 			);
-			path = AboutCell;
+			path = ContactsViewController;
+			sourceTree = "<group>";
+		};
+		300A95EF2187177100D509AB /* SettingsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				300A95F02187178E00D509AB /* SettingsViewController.swift */,
+				300A95F12187178E00D509AB /* SettingsViewController.xib */,
+			);
+			path = SettingsViewController;
+			sourceTree = "<group>";
+		};
+		300A95F42187179300D509AB /* FavoritesViewController */ = {
+			isa = PBXGroup;
+			children = (
+				300A95F5218717A800D509AB /* FavoritesViewController.swift */,
+				300A95F6218717A800D509AB /* FavoritesViewController.xib */,
+			);
+			path = FavoritesViewController;
+			sourceTree = "<group>";
+		};
+		300A95F92187239800D509AB /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				300A95FA218723B500D509AB /* SpicyRice-Regular.ttf */,
+			);
+			name = Fonts;
 			sourceTree = "<group>";
 		};
 		30E67C68216B4CE000837EA1 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				302A5F192174A1E00078F0CB /* AboutCell */,
 				30E67C77216B674000837EA1 /* EmptyStatusCell */,
 				30E67C69216B4CEF00837EA1 /* ActorCell */,
 			);
@@ -161,6 +199,7 @@
 		BD1BA85F2162087C00A10698 /* Series */ = {
 			isa = PBXGroup;
 			children = (
+				300A95F92187239800D509AB /* Fonts */,
 				30E67C68216B4CE000837EA1 /* Cells */,
 				BD1BA87E2162256F00A10698 /* Models */,
 				BD1BA8722162099D00A10698 /* ViewControllers */,
@@ -168,6 +207,7 @@
 				BD1BA8672162087D00A10698 /* Assets.xcassets */,
 				BD1BA8692162087D00A10698 /* LaunchScreen.storyboard */,
 				BD1BA86C2162087D00A10698 /* Info.plist */,
+				300A95E32187091500D509AB /* Localizable.strings */,
 			);
 			path = Series;
 			sourceTree = "<group>";
@@ -175,7 +215,10 @@
 		BD1BA8722162099D00A10698 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				302A5F0E21749FF30078F0CB /* AboutViewController */,
+				300A95F42187179300D509AB /* FavoritesViewController */,
+				300A95EF2187177100D509AB /* SettingsViewController */,
+				300A95EA2187175400D509AB /* ContactsViewController */,
+				300A95E52187171C00D509AB /* ChatsViewController */,
 				30E67C6A216B4D0100837EA1 /* ActorsViewController */,
 				BD1BA87921621BEF00A10698 /* SeriesViewController */,
 				BD1BA87421620A1900A10698 /* LoginViewController */,
@@ -254,6 +297,7 @@
 			knownRegions = (
 				en,
 				Base,
+				es,
 			);
 			mainGroup = BD1BA8542162087C00A10698;
 			productRefGroup = BD1BA85E2162087C00A10698 /* Products */;
@@ -270,15 +314,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				300A95E92187174E00D509AB /* ChatsViewController.xib in Resources */,
 				BD1BA86B2162087D00A10698 /* LaunchScreen.storyboard in Resources */,
+				300A95F32187178E00D509AB /* SettingsViewController.xib in Resources */,
 				30E67C7B216B676400837EA1 /* EmptyStatusCell.xib in Resources */,
-				302A5F182174A0D10078F0CB /* About2LabelsCell.xib in Resources */,
-				302A5F122174A0340078F0CB /* AboutViewController.xib in Resources */,
 				30E67C72216B4D8100837EA1 /* ActorCell.xib in Resources */,
+				300A95E12187091500D509AB /* Localizable.strings in Resources */,
 				BD1BA8682162087D00A10698 /* Assets.xcassets in Resources */,
 				30E67C6E216B4D6600837EA1 /* ActorsViewController.xib in Resources */,
 				BD1BA87821620A6700A10698 /* LoginViewController.xib in Resources */,
+				300A95FB218723B500D509AB /* SpicyRice-Regular.ttf in Resources */,
 				BD1BA87D21621C2800A10698 /* SeriesViewController.xib in Resources */,
+				300A95F8218717A800D509AB /* FavoritesViewController.xib in Resources */,
+				300A95EE2187176D00D509AB /* ContactsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,20 +378,31 @@
 			files = (
 				30E67C6D216B4D6600837EA1 /* ActorsViewController.swift in Sources */,
 				BD1BA87C21621C2800A10698 /* SeriesViewController.swift in Sources */,
+				300A95F22187178E00D509AB /* SettingsViewController.swift in Sources */,
 				BD1BA87721620A6700A10698 /* LoginViewController.swift in Sources */,
-				302A5F172174A0D10078F0CB /* About2LabelsCell.swift in Sources */,
-				302A5F112174A0340078F0CB /* AboutViewController.swift in Sources */,
 				30E67C7A216B676400837EA1 /* EmptyStatusCell.swift in Sources */,
 				30E67C76216B5AF900837EA1 /* Actor.swift in Sources */,
 				BD1BA880216225BF00A10698 /* Serie.swift in Sources */,
 				BD1BA8612162087C00A10698 /* AppDelegate.swift in Sources */,
+				300A95E82187174E00D509AB /* ChatsViewController.swift in Sources */,
 				30E67C71216B4D8100837EA1 /* ActorCell.swift in Sources */,
+				300A95F7218717A800D509AB /* FavoritesViewController.swift in Sources */,
+				300A95ED2187176D00D509AB /* ContactsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		300A95E32187091500D509AB /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				300A95E22187091500D509AB /* en */,
+				300A95E42187093200D509AB /* es */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		BD1BA8692162087D00A10698 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -359,6 +418,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -419,6 +479,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

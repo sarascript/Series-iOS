@@ -18,8 +18,34 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         window = UIWindow(frame: UIScreen.main.bounds)
         if let window = window{
-            let loginVC = AboutViewController()
-            window.rootViewController = loginVC
+            
+            window.tintColor = UIColor.white
+            
+            UINavigationBar.appearance().barTintColor = UIColor.black
+            UITabBar.appearance().barTintColor = UIColor.black
+            UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.white, kCTFontAttributeName : UIFont(name: "SpicyRice-Regular", size: 26)] as? [NSAttributedStringKey : Any]
+            UINavigationBar.appearance().largeTitleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.white, kCTFontAttributeName : UIFont(name: "SpicyRice-Regular", size: 26)] as? [NSAttributedStringKey : Any]
+            
+            let chatsVC = ChatsViewController()
+            let contactsVC = ContactsViewController()
+            let settingsVC = SettingsViewController()
+            let favoritesVC = FavoritesViewController()
+            
+            let chatsNavigationController = UINavigationController(rootViewController: chatsVC)
+            chatsNavigationController.navigationBar.prefersLargeTitles = true
+            chatsNavigationController.navigationBar.isTranslucent = false
+            let contactsNavigationController = UINavigationController(rootViewController: contactsVC)
+            contactsNavigationController.navigationBar.isTranslucent = false
+            let settingsNavigationController = UINavigationController(rootViewController: settingsVC)
+            settingsNavigationController.navigationBar.isTranslucent = false
+            let favoritesNavigationController = UINavigationController(rootViewController: favoritesVC)
+            favoritesNavigationController.navigationBar.isTranslucent = false
+            
+            let tabBarController = UITabBarController()
+            tabBarController.tabBar.isTranslucent = false
+            tabBarController.viewControllers = [chatsNavigationController, contactsNavigationController, settingsNavigationController, favoritesNavigationController]
+            
+            window.rootViewController = tabBarController
             window.makeKeyAndVisible()
         }
         return true

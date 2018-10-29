@@ -23,6 +23,8 @@ class LoginViewController: UIViewController {
         loginButton.layer.masksToBounds=true
         loginButton.layer.borderWidth=2.0
         loginButton.layer.borderColor=UIColor.white.cgColor
+        
+        loginButton.setTitle(NSLocalizedString("title_login_button", comment: ""), for: .normal)
     }
 
     override func didReceiveMemoryWarning() {
